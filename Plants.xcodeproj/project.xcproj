@@ -11,20 +11,20 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "Plant", "target-membership": [ "Plant" ] },
+    { "kind": "folder", "path": "Plants", "target-membership": [ "Plants" ] },
     {
       "kind": "group",
       "name": "Products",
       "children": [
-        { "path": "<PRODUCTS>/Plant.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
+        { "path": "<PRODUCTS>/Plants.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
       ],
     },
   ],
   "targets": [
     {
-      "name": "Plant",
+      "name": "Plants",
       "id": "000000000000000100000000",
-      "product": "Products/Plant.app",
+      "product": "Products/Plants.app",
       "product-type": "application",
       "build-phases": [
         "compile-sources",
