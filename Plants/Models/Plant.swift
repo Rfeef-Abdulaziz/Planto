@@ -1,7 +1,7 @@
 
 import Foundation
 
-// معلومات النبته
+// MARK: - Model
 struct Plant: Identifiable, Codable {
     var id = UUID()
     var name: String
@@ -9,9 +9,26 @@ struct Plant: Identifiable, Codable {
     var light: Light
     var wateringDays: WateringDays
     var water: WaterAmount
-    var isWatered = false
+    var lastWatered: Date? = nil
+
+    var isWatered: Bool {
+        if let last = lastWatered {
+            return Calendar.current.isDateInToday(last)
+        } else {
+            return false
+        }
+    }
+    
+    var isDueToday: Bool {
+        guard let last = lastWatered else { return true }
+        let from = Calendar.current.startOfDay(for: last)
+        let to = Calendar.current.startOfDay(for: Date())
+        let days = Calendar.current.dateComponents([.day], from: from, to: to).day ?? 0
+        return days >= wateringDays.days
+    }
 }
 
+// MARK: - Options
 enum Room: String, CaseIterable, Codable {
     case bedroom = "Bedroom"
     case livingRoom = "Living Room"
@@ -61,4 +78,5 @@ enum WaterAmount: String, CaseIterable, Codable {
     case ml100to200 = "100-200 ml"
     case ml200to300 = "200-300 ml"
 }
+
 
