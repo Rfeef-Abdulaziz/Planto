@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OnboardingView: View {
 
-    @State private var showSheet = false   // 🆕 ١
+    @State private var showSheet = false
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,17 +31,17 @@ struct OnboardingView: View {
                     .multilineTextAlignment(.center)
 
                 Button {
-                    showSheet = true   // 🆕 ٢
+                    showSheet = true
                 } label: {
                     Text("Set Plant Reminder")
                         .bold()
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color("PlantGreen"))
-                        .clipShape(Capsule())
                 }
-                .padding(.horizontal, 40)
+                .buttonStyle(.glassProminent)
+                .tint(Color("PlantGreen"))
+                .controlSize(.large)
+                .padding(.horizontal, 70)
                 .padding(.top, 30)
             }
             .frame(maxWidth: .infinity)
@@ -50,7 +50,7 @@ struct OnboardingView: View {
             Spacer()
         }
         .padding()
-        .sheet(isPresented: $showSheet) {   // 🆕 ٣
+        .sheet(isPresented: $showSheet) {
             SetReminderView()
         }
     }
