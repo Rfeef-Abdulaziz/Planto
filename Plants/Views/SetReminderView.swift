@@ -31,6 +31,7 @@ struct SetReminderView: View {
                         }
                     } label: {
                         Label("Room", systemImage: "location")
+                            .foregroundStyle(.white)
                     }
 
                     Picker(selection: $light) {
@@ -39,6 +40,7 @@ struct SetReminderView: View {
                         }
                     } label: {
                         Label("Light", systemImage: "sun.max")
+                            .foregroundStyle(.white)
                     }
                 }
 
@@ -49,6 +51,7 @@ struct SetReminderView: View {
                         }
                     } label: {
                         Label("Watering Days", systemImage: "drop")
+                            .foregroundStyle(.white)
                     }
 
                     Picker(selection: $water) {
@@ -57,6 +60,7 @@ struct SetReminderView: View {
                         }
                     } label: {
                         Label("Water", systemImage: "drop")
+                            .foregroundStyle(.white)
                     }
                 }
 
@@ -72,7 +76,6 @@ struct SetReminderView: View {
                     }
                 }
             }
-            .tint(Color("PlantGreen"))
             .navigationTitle("Set Reminder")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
