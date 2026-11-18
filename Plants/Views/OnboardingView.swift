@@ -1,0 +1,63 @@
+import SwiftUI
+
+struct OnboardingView: View {
+
+    @State private var showSheet = false   // 🆕 ١
+
+    var body: some View {
+        VStack(alignment: .leading) {
+
+            Text("My Plants 🌱")
+                .font(.largeTitle)
+                .bold()
+
+            Divider()
+
+            Spacer()
+
+            VStack(spacing: 16) {
+                Image("plantStart")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 220)
+                Text("Start your plant journey!")
+                    .font(.system(size: 22))
+                    .bold()
+
+                Text("Now all your plants will be in one place and we will help you take care of them :) 🪴")
+                    .font(.system(size: 14))
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+
+                Button {
+                    showSheet = true   // 🆕 ٢
+                } label: {
+                    Text("Set Plant Reminder")
+                        .bold()
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color("PlantGreen"))
+                        .clipShape(Capsule())
+                }
+                .padding(.horizontal, 40)
+                .padding(.top, 30)
+            }
+            .frame(maxWidth: .infinity)
+
+            Spacer()
+            Spacer()
+        }
+        .padding()
+        .sheet(isPresented: $showSheet) {   // 🆕 ٣
+            SetReminderView()
+        }
+    }
+}
+
+#Preview {
+    OnboardingView()
+        .environment(PlantViewModel())
+        .preferredColorScheme(.dark)
+}

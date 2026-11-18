@@ -5,21 +5,29 @@ struct AllDoneView: View {
         VStack(spacing: 12) {
             Spacer()
 
-            Image("plant")
+            Image("plantDone")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 200)
+                .frame(width: 150, height: 220)
 
             Text("All Done! 🎉")
-                .font(.title2)
+                .font(.system(size: 22))
+                .font(.title3)
                 .bold()
 
             Text("All Reminders Completed")
-                .foregroundColor(.gray)
+                .font(.system(size: 14))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
 
             Spacer()
             Spacer()
         }
         .frame(maxWidth: .infinity)
     }
+}
+
+#Preview {
+    AllDoneView()
+        .preferredColorScheme(.dark)
 }
