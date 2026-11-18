@@ -34,6 +34,7 @@
       "build-settings": {
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
+        "DEVELOPMENT_TEAM": "5BLLYWXF4X",
         "ENABLE_APP_SANDBOX": "YES",
         "ENABLE_PREVIEWS": "YES",
         "ENABLE_USER_SELECTED_FILES": "readonly",

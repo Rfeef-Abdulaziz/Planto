@@ -27,15 +27,15 @@ struct RemindersView: View {
                     .frame(maxWidth: .infinity)
                 Spacer()
 
-            } else if store.allDone {                    // 🆕 من الطباخ
+            } else if store.allDone {
                 AllDoneView()
 
             } else {
                 VStack(spacing: 10) {
-                    Text(store.progressText)             // 🆕 من الطباخ
+                    Text(store.progressText)
                         .font(.subheadline)
 
-                    ProgressView(value: Double(store.wateredCount),   // 🆕
+                    ProgressView(value: Double(store.wateredCount), 
                                  total: Double(store.plants.count))
                         .tint(Color("PlantGreen"))
                 }
@@ -136,6 +136,7 @@ struct PlantRow: View {
                         .clipShape(Capsule())
                 }
             }
+            .opacity(plant.isWatered ? 0.6 : 1)
         }
         .padding(.vertical, 4)
     }
