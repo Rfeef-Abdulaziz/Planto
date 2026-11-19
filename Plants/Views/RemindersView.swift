@@ -12,7 +12,6 @@ struct RemindersView: View {
         VStack(alignment: .leading) {
 
             Text("My Plants 🌱")
-                .font(.system(size: 34, weight: .bold, design: .rounded))
                 .font(.largeTitle)
                 .bold()
                 .padding(.horizontal)
@@ -74,10 +73,11 @@ struct RemindersView: View {
                     .font(.title2)
                     .bold()
                     .foregroundStyle(.white)
-                    .frame(width: 56, height: 56)
-                    .background(Color("PlantGreen"))
-                    .clipShape(Circle())
-            }
+                    .padding(8)
+                        }
+            .buttonStyle(.glassProminent)
+            .buttonBorderShape(.circle)
+            .tint(Color("PlantGreen"))
             .padding()
         }
         .sheet(isPresented: $showSheet) {
@@ -119,7 +119,7 @@ struct PlantRow: View {
                     .font(.title3)
 
                 HStack {
-                    Label(plant.light.rawValue, systemImage: "sun.max")
+                    Label(plant.light.rawValue, systemImage: plant.light.icon)
                         .font(.caption)
                         .foregroundStyle(Color("SunYellow"))
                         .padding(.horizontal, 8)

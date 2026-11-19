@@ -26,7 +26,6 @@ struct OnboardingView: View {
 
                 Text("Now all your plants will be in one place and we will help you take care of them :) 🪴")
                     .font(.system(size: 14))
-                    .font(.footnote)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
 

@@ -11,20 +11,20 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "Plants", "target-membership": [ "Plants" ] },
+    { "kind": "folder", "path": "Plants", "target-membership": [ "Planto" ] },
     {
       "kind": "group",
       "name": "Products",
       "children": [
-        { "path": "<PRODUCTS>/Plants.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
+        { "path": "<PRODUCTS>/Planto.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
       ],
     },
   ],
   "targets": [
     {
-      "name": "Plants",
+      "name": "Planto",
       "id": "000000000000000100000000",
-      "product": "Products/Plants.app",
+      "product": "Products/Planto.app",
       "product-type": "application",
       "build-phases": [
         "compile-sources",
@@ -32,6 +32,7 @@
         "resources",
       ],
       "build-settings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "Planto",
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
         "DEVELOPMENT_TEAM": "5BLLYWXF4X",

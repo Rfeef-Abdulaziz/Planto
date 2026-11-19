@@ -12,7 +12,6 @@ struct AllDoneView: View {
 
             Text("All Done! 🎉")
                 .font(.system(size: 22))
-                .font(.title3)
                 .bold()
 
             Text("All Reminders Completed")
