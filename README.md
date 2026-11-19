@@ -27,6 +27,10 @@ Users can add their plants, set each plant's care details, get watering reminder
 - **Data Persistence:** plants are saved on the device and are still there after closing the app.
 - **Design:** an always-dark interface and Liquid Glass buttons, following the academy's design.
 
+## App Preview
+
+<img width="2400" height="1200" alt="🖼️ App Thumbnail" src="https://github.com/user-attachments/assets/1f9c8259-17fb-4645-976f-2413c603e873" />
+
 ## Architecture (MVVM)
 
 The app is split into three layers, and each layer has one job:
