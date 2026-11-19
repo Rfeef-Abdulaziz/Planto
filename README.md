@@ -27,7 +27,7 @@ Users can add their plants, manage their care details, set watering frequencies,
 
 ## App Preview
 
-![Uploading 🖼️ App Thumbnail.png…]()
+![Uploading 🖼️ App Thumbnail.png…]
 
 
 ## Technologies
