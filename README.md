@@ -27,7 +27,8 @@ Users can add their plants, manage their care details, set watering frequencies,
 
 ## App Preview
 
-![Planto App Preview](assets/app-thumbnail.png)
+![Uploading 🖼️ App Thumbnail.png…]()
+
 
 ## Technologies
 
